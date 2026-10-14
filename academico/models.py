@@ -31,6 +31,10 @@ class Profesor(models.Model):
         verbose_name_plural = "Profesores"
         ordering = ["apellido", "nombre"]
 
+
+
+
+
     def __str__(self):
         return f"{self.nombre} {self.apellido}"
 

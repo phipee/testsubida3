@@ -1,0 +1,46 @@
+revisar si la version de python es mayor a 3.10
+mientras se instala xampp
+
+crear entorno virtual y todo
+
+crear carpeta en escritorio
+meterse en la carpeta
+python -m venv entorno
+cd entorno
+cd scripts
+activate
+cd ..
+cd ..
+(qquedarse en la carpeta  inicial)
+pip install "django>=4.2,<5.0" mysqlclient
+python -m django --version
+django-admin startproject config .
+(ahi creamos el proyecto)
+python manage.py startapp academico_app
+(configurar settings.py con installed apps - databases -  idioma y zona)
+
+luego vamos a dejar las urls.py por defecot
+vamos a copiar y pegar el models.py o en su defecto vamos a hacerlo
+
+ahora suponiendo que xampp ya se instalo 
+hay que apretar en start en apache y MySQL
+luego en 
+con elk servidor prendido
+http://localhost/phpmyadmin/
+apretamos nueva arriba a la izquierda y le ponemos el nombre asignado
+ahora haremos las migraciones
+(en caso de dar error poner stop a todo despues instalar una version anterior de django luego repetimos )
+
+python manage.py makemigrations
+python manage.py migrations
+
+python manage.py createsuperuser 
+
+(sin runear el server)
+registrar modelos en admin.py
+ahora makemigrations y migrate 
+luego 
+python manage.py runserver
+http://127.0.0.1:8000/admin/
+
+al ingresar se veran todas las tablas - seguido a esto se deberan las tablas que pida el profe 
