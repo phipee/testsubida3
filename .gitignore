@@ -10,3 +10,8 @@ env/
 venv/
 .env
 .vscode/
+
+# Instaladores y archivos pesados
+*.exe
+*.zip
+*.rar
